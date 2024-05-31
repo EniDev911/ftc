@@ -1,5 +1,5 @@
 <!-- Header -->
-<header id="header"{% if page.layout == 'landing' %} class="alt"{% endif %}>
+<header id="header" {% if page.layout=='landing' %} class="alt" {% endif %}>
   <h1><a href="{{ site.baseurl }}/index.html">{{ site.title }}</a></h1>
   <nav id="nav">
     <ul>
@@ -8,16 +8,16 @@
         <div id="menu">
           <ul>
             <li><a href="index.html">Inicio</a></li>
-            {% for my_page in site.pages %}
+            {% assign sorted_pages = site.pages | sort:"order" %}
+            {% for my_page in sorted_pages %}
             {% if my_page.title %}
             <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
             {% endif %}
             {% endfor %}
-            <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"
-             class="icon fa-feed"> RSS Feed</a></li>
-           </ul>
-         </div>
-       </li>
-     </ul>
-   </nav>
- </header>
+            <li><a href="{{ " /feed.xml" | prepend: site.baseurl }}" class="icon fa-feed"> RSS Feed</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
