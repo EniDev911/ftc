@@ -10,7 +10,7 @@
             <li><a href="index.html">Inicio</a></li>
             {% assign sorted_pages = site.pages | sort:"order" %}
             {% for my_page in sorted_pages %}
-            {% if my_page.title %}
+            {% if my_page.title and my_page.show %}
             <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
             {% endif %}
             {% endfor %}

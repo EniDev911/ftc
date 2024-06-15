@@ -51,6 +51,10 @@ $baseurl: '{{ site.baseurl }}/images';
 			background: #075e54 !important;
 		}
 
+		.highlight {
+			tab-size: 2;
+		}
+
 	}
 
 	body, input, select, textarea {
