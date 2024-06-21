@@ -44,6 +44,17 @@ Esto es **texto importante** . Esto está en *cursiva y se enfatiza* . [Esto es 
 	<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
 </ul>
 
+```html
+<ul class="icons">
+	<li><a href="#" class="icon fa-gavel"><span class="label">Github</span></a></li>
+</ul>
+```
+
+<ul class="icons">
+	<li><a href="#" class="icon fa-gavel"><span class="label">Gavel</span></a></li>
+	<li><a href="#" class="icon fa-phone"><span class="label">Phone</span></a></li>
+	<li><a href="#" class="icon fa-handshake-simple"><span class="label">Phone</span></a></li>
+</ul>
 
 ---
 

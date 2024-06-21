@@ -2,11 +2,10 @@
 #
 
 # Site settings
-title: FTC
-description: |
-  Nuestro compromiso
-  Es una prioridad
-  Creado por [EniDev911](https://github.com/EniDev911/)
+title: SJA
+description: |-
+  Confía en nuestros abogados para tu paz mental.
+  Consulta sin compromiso
 owner: FTC # or company name
 first_published: 2024 # if migrating another site, the year of your first publish
 email: your-email@domain.com
