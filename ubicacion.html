@@ -1,0 +1,57 @@
+---
+layout: default
+title: Oficinas
+order: 3
+show: true
+---
+
+<style>
+
+.button:focus{
+    background-color: #255657 !important;
+    color: #fff !important;
+    border: 2px solid #000 !important;
+}
+</style>
+
+<section class="wrapper style5">
+  <h2 align="center">Nuestras oficinas<br><span style="font-size: 17px">conoce nuestra ubicación</span></h2>
+  <div class="inner" style="text-align: center;">
+  <a href="javascript:void(0)"
+    class="button"
+    data-text="Sotero del Rio N° 508, Oficina 513 - 514, Santiago Centro"
+    data-href='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.4488363369305!2d-70.6548195!3d-33.4376111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a51b63b6b3%3A0x26942d7b2cf35fc!2sDr.%20S%C3%B3tero%20del%20R%C3%ADo%20508%2C%20Oficina%20513%20-%20514%2C%208340297%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1719335709976!5m2!1ses!2scl'>
+  Santiago centro
+    </a>
+      <a href="javascript:void(0)"
+    class="button"
+    data-text="Américo Vespucio 1307, Oficina 523, Las Condes"
+    data-href='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.9051432236474!2d-70.5776417!3d-33.4257173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf0306612fc7%3A0x23948dc3065499d0!2sAv.%20Am%C3%A9rico%20Vespucio%20Sur%201307%2C%20oficina%20523%2C%207550464%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1719338346429!5m2!1ses!2scl'>
+  Las condes
+    </a>
+    <a href="javascript:void(0)"
+    class="button"
+    data-text="Arturo Prat Nº 601-Tercer Piso, Melipilla"
+    data-href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.8801300263267!2d-71.2203016557512!3d-33.68616790465559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966255eab0bce993%3A0x7bca80c458744a0e!2sArturo%20Prat%20601%2C%209580971%20Melipilla%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1719341305864!5m2!1ses!2scl">
+  Melipilla
+    </a>
+  </div>
+  <br>
+  <div class="text-direction" align="center"></div>
+</section>
+  {% include iframe.html src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.4488363369305!2d-70.6548195!3d-33.4376111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a51b63b6b3%3A0x26942d7b2cf35fc!2sDr.%20S%C3%B3tero%20del%20R%C3%ADo%20508%2C%20Oficina%20513%20-%20514%2C%208340297%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1719335709976!5m2!1ses!2scl' %}
+
+<script>
+	const resource = document.querySelector(".resource");
+	const text = document.querySelector(".text-direction");
+
+	const btns = document.querySelectorAll("a.button");
+  btns[0].focus();
+	btns.forEach((element) => {
+		element.addEventListener('click', (event) => {
+			resource.children[0].src = event.target.dataset.href;
+      text.textContent = event.target.dataset.text;
+		})
+	})
+</script>
+
