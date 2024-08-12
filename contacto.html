@@ -4,45 +4,52 @@ title: Contacto
 order: 4
 show: true
 ---
-
 <section class="wrapper style5">
-  <div class="inner">
-    <h2 align="center">Contáctate Con Nosotros<br><span style="font-size: 17px">Y Terminemos Con Tu Problema
-        Legal...</span></h2>
-    <form method="post" action="#">
-      <div class="row uniform">
-        <div class="6u 12u$(xsmall)">
-          <label for="name">Nombre</label>
-          <input type="text" name="name" id="name" value="" placeholder="Mario Gonzáles" />
-        </div>
-        <div class="6u$ 12u$(xsmall)">
-          <label for="name">Email</label>
-          <input type="email" name="email" id="email" value="" placeholder="correo@mail.com" />
-        </div>
-        <div class="12u$">
-          <div class="select-wrapper">
-            <select name="demo-category" id="demo-category">
-              <option value="">- Categoría -</option>
-              <option value="1">Opción 1</option>
-              <option value="1">Opción 2</option>
-              <option value="1">Opción 3</option>
-            </select>
-          </div>
-        </div>
-        <div class="6u$ 12u$(small)">
-          <input type="checkbox" id="demo-human" name="demo-human" checked>
-          <label for="demo-human">No soy un robot</label>
-        </div>
-        <div class="12u$">
-          <textarea name="demo-message" id="demo-message" placeholder="Mensaje" rows="6"></textarea>
-        </div>
-        <div class="12u$">
-          <ul class="actions">
-            <li><input type="submit" value="Enviar Mensaje" class="special" /></li>
-            <li><input type="reset" value="Reset" /></li>
-          </ul>
-        </div>
-      </div>
-    </form>
-  </div>
+    <div class="inner">
+        <h2 align="center">Contáctate Con Nosotros<br><span style="font-size: 17px">Y Terminemos Con Tu Problema
+                Legal...</span></h2>
+        <form action="mailto:enidev911@ejemplo.com" method="post" enctype="text/plain">
+            <div class="row uniform">
+                <div class="6u 12u$(xsmall)">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" value="" placeholder="Mario Gonzáles" />
+                </div>
+                <div class="6u$ 12u$(xsmall)">
+                    <label for="name">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="984687949" required />
+                </div>
+                <div class="12u$">
+                    <div class="select-wrapper">
+                        <select name="demo-category" id="demo-category">
+                            <option value="">- Categoría -</option>
+                            <optgroup label="DERECHO DE FAMILIA">
+                                <option value="1">Pensión de alimentos </option>
+                                <option value="2">Divorcio</option>
+                                <option value="3">Violencia Intrafamiliar (VIF)</option>
+                            </optgroup>
+                            <optgroup label="DERECHO CIVIL">
+                                <option value="1">Juicios de Arriendo</option>
+                                <option value="2">Juicios de Precarios</option>
+                            </optgroup>
+                            <optgroup label="DERECHO SUCESORIO">
+                                <option value="1">Derecho de Herencia</option>
+                                <option value="2">Testamento</option>
+                                <option value="3">Juicio de Partición</option>
+                                <option value="4">Posesión Efectiva</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="12u$">
+                    <textarea name="demo-message" id="demo-message" placeholder="Mensaje" rows="6"></textarea>
+                </div>
+                <div class="12u$">
+                    <ul class="actions">
+                        <li><input type="submit" value="Enviar Mensaje" class="special" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
 </section>
