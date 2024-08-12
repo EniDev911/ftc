@@ -6,9 +6,6 @@ show: true
 order: 2
 ---
 
-<h3>Abogados</h3>
-
-<p>Somos un equipo de abogados altamente capacitados y especializados, con experiencia en diversas áreas legales. Profesionales que nos caracterizamos por un gran compromiso, ética y dedicación en cada caso que asumimos.</p>
 
 {% for abogado in site.data.abogados %}
 {% include card.html img=abogado.img name=abogado.name desc=abogado.desc %}
