@@ -1843,3 +1843,15 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 	}
+
+	.fa-users:before,
+	.fa-map:before,
+	.fa-home:before,
+	.fa-feed:before,
+	.fa-paper-plane:before {
+		color: #96c477;
+		font-size: 16px;
+	}
+	.fa-home:before {
+		font-size: 20px;
+	}
