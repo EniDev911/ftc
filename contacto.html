@@ -9,7 +9,8 @@ show: true
     <div class="inner">
         <h2 align="center">Contáctate Con Nosotros<br><span style="font-size: 17px">Y Terminemos Con Tu Problema
         Legal...</span></h2>
-        <form action="mailto:contacto@sotojaquesabogados.com?subject=Necesito información" method="post" enctype="text/plain" id="form">
+        <form action="https://formspree.io/f/xzzbenrl" method="¨POST">
+            <input type="hidden" name="_subject" id="subject" />
             <div class="row uniform">
                 <div class="6u 12u$(xsmall)">
                     <label for="nombre">Nombre</label>
@@ -56,6 +57,24 @@ show: true
 </section>
 
 <script>
+        // Cuando el formulario se envíe, actualizar el campo _subject
+    document.querySelector('form').onsubmit = function(event) {
+        // Obtener el valor seleccionado del servicio
+        var servicioSeleccionado = document.getElementById('category').value;
+        
+        // Si no se ha seleccionado una opción, evitar el envío
+        if (!servicioSeleccionado) {
+            alert('Por favor, selecciona un servicio');
+            event.preventDefault();  // Evita que el formulario se envíe
+            return;
+        }
+
+        // Modificar el valor del campo _subject para incluir el servicio seleccionado
+        var subject = "Consulta sobre: " + servicioSeleccionado;
+        document.getElementById('subject').value = subject;
+    };
+</script>
+<!-- <script>
     document.getElementById('form').onsubmit = function(event) {
         event.preventDefault(); // Evita el envío del formulario
 
@@ -78,4 +97,4 @@ show: true
         // Redirige al enlace mailto
         window.location.href = mailtoLink;
     };
-</script>
+</script> -->
