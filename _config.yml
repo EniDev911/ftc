@@ -5,7 +5,7 @@
 title: SJA
 description: |-
   Confía en nuestros abogados para una solución segura y sin preocupaciones. Realiza tus consultas sin costo.
-owner: FTC # or company name
+owner: sotojaquesabogados # or company name
 first_published: 2024 # if migrating another site, the year of your first publish
 email: your-email@domain.com
 # baseurl: "/ftc" # the subpath of your site, e.g. /blog
@@ -15,7 +15,7 @@ social:
   linkedin-square: https://linkedin.com/in/<username>
   facebook-official: https://facebook.com/<username>
   instagram: https://www.instagram.com/<username>
-  email: mailto:example@mail.com
+  email: mailto:contacto@sotojaquesabogados.com
   # github: https://github.com/<username>
   # google-plus-square: https://plus.google.com/u/0/+<username>
   #flickr:

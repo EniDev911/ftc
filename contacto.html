@@ -9,11 +9,11 @@ show: true
     <div class="inner">
         <h2 align="center">Contáctate Con Nosotros<br><span style="font-size: 17px">Y Terminemos Con Tu Problema
         Legal...</span></h2>
-        <form action="mailto:enidev911@gmail.com?subject=Necesito información" method="post" enctype="text/plain">
+        <form action="mailto:contacto@sotojaquesabogados.com?subject=Necesito información" method="post" enctype="text/plain" id="form">
             <div class="row uniform">
                 <div class="6u 12u$(xsmall)">
-                    <label for="name">Nombre</label>
-                    <input type="text" name="name" id="name" value="" placeholder="Mario Gonzáles" />
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="name" value="" placeholder="Mario Gonzáles" />
                 </div>
                 <div class="6u$ 12u$(xsmall)">
                     <label for="name">Teléfono</label>
@@ -21,28 +21,28 @@ show: true
                 </div>
                 <div class="12u$">
                     <div class="select-wrapper">
-                        <select name="servicio" id="demo-category">
+                        <select name="servicio" id="category">
                             <option value="">- Categoría -</option>
                             <optgroup label="DERECHO DE FAMILIA">
-                                <option value="1">Pensión de alimentos </option>
-                                <option value="2">Divorcio</option>
-                                <option value="3">Violencia Intrafamiliar (VIF)</option>
+                                <option value="Pensión de alimentos">Pensión de alimentos </option>
+                                <option value="Divorcio">Divorcio</option>
+                                <option value="Violencia Intrafamiliar">Violencia Intrafamiliar (VIF)</option>
                             </optgroup>
                             <optgroup label="DERECHO CIVIL">
-                                <option value="1">Juicios de Arriendo</option>
-                                <option value="2">Juicios de Precarios</option>
+                                <option value="Juicios de Arriendo">Juicios de Arriendo</option>
+                                <option value="Juicios de Precarios">Juicios de Precarios</option>
                             </optgroup>
                             <optgroup label="DERECHO SUCESORIO">
-                                <option value="1">Derecho de Herencia</option>
-                                <option value="2">Testamento</option>
-                                <option value="3">Juicio de Partición</option>
-                                <option value="4">Posesión Efectiva</option>
+                                <option value="Derecho de Herencia">Derecho de Herencia</option>
+                                <option value="Testamento">Testamento</option>
+                                <option value="Juicio de Partición">Juicio de Partición</option>
+                                <option value="Posesión Efectiva">Posesión Efectiva</option>
                             </optgroup>
                         </select>
                     </div>
                 </div>
                 <div class="12u$">
-                    <textarea name="mensaje" id="demo-message" placeholder="Mensaje" rows="6"></textarea>
+                    <textarea name="mensaje" id="message" placeholder="Mensaje" rows="6"></textarea>
                 </div>
                 <div class="12u$">
                     <ul class="actions">
@@ -54,3 +54,28 @@ show: true
         </form>
     </div>
 </section>
+
+<script>
+    document.getElementById('form').onsubmit = function(event) {
+        event.preventDefault(); // Evita el envío del formulario
+
+        // Obtén el valor del campo de selección
+        var servicioSeleccionado = document.getElementById('category').value;
+        var nombre = document.getElementById('name').value;
+        var telefono = document.getElementById('phone').value;
+        var mensaje = document.getElementById('message').value;
+
+        // Construye el subject y el body del correo
+        var subject = "Necesito información sobre: " + encodeURIComponent(servicioSeleccionado);
+        var body = "Nombre: " + encodeURIComponent(nombre) +
+                   "%0ATeléfono: " + encodeURIComponent(telefono) +
+                   "%0AServicio: " + encodeURIComponent(servicioSeleccionado) +
+                   "%0AMensaje: " + encodeURIComponent(mensaje);
+
+        // Crea el enlace mailto
+        var mailtoLink = "mailto:contacto@sotojaquesabogados.com?subject=" + subject + "&body=" + body;
+
+        // Redirige al enlace mailto
+        window.location.href = mailtoLink;
+    };
+</script>
