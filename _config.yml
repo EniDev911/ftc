@@ -8,8 +8,8 @@ description: |-
 owner: FTC # or company name
 first_published: 2024 # if migrating another site, the year of your first publish
 email: your-email@domain.com
-baseurl: "/ftc" # the subpath of your site, e.g. /blog
-url: "https://enidev911.github.io" # the base hostname & protocol for your site
+# baseurl: "/ftc" # the subpath of your site, e.g. /blog
+url: "https://sotojaquesabogados.cl/" # the base hostname & protocol for your site
 social:
   twitter: https://twitter.com/<username>
   linkedin-square: https://linkedin.com/in/<username>
